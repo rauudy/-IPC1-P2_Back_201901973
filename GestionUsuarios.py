@@ -4,13 +4,7 @@ class Gestor:
     def __init__(self):
         self.usuarios=[]
     
-    def insertar(self,nombre,apellido,username,password):
-        newuser = Usuarios(nombre,apellido,username,password)
-        if self.existeuser(username):
-            return False
-        else:
-            self.usuarios.append(newuser)
-            return True
+    
 
     def existeuser(self,username):
         for x in self.usuarios:
@@ -31,6 +25,14 @@ class Gestor:
                 return "{\"nombre\":\""+x.nombre+"\", \"apellido\": \""+x.apellido+"\", \"username\": \""+x.username+"\"}\n"
         return ""
 
+    def insertar(self,nombre,apellido,username,password):
+        newuser = Usuarios(nombre,apellido,username,password)
+        if self.existeuser(username):
+            return False
+        else:
+            self.usuarios.append(newuser)
+            return True
+
     def iniciarsesion(self,username,password):
         for x in self.usuarios:
             if x.username==username and x.password==password:
@@ -40,5 +42,5 @@ class Gestor:
     def getpassword(self,username):
         for x in self.usuarios:
             if x.username==username:
-                return "{\"password\":\""+x.password+"\"}\n"
+                return "{\"data\":\""+x.password+"\"}"
         return ""
