@@ -25,3 +25,7 @@
 ![image](https://user-images.githubusercontent.com/66295181/98759458-bd202880-2396-11eb-8b17-8e6fc6ff561b.png)
 
 
+## Servidor; Flask
+
+#### Utilizando un Index como pagina principal para los metodos que se mandan al FrontEnd
+

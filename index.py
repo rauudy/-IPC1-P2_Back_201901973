@@ -58,6 +58,12 @@ def iniciarsesion():
         return "{\"data\":\"true\"}"
     else:
         return "{\"data\":\"false\"}"
+
+@app.route('/cargaM', methods=['POST'])
+def cargaM():
+    data = request.json
+    print(data)
+    return data
     
 # Ruta del Servidor Local
 if __name__ == "__main__":
