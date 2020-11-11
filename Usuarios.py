@@ -1,3 +1,4 @@
+# Este es el formato de un Usuario
 class Usuarios:
     def __init__(self,nombre,apellido,username,password):
         self.nombre=nombre
